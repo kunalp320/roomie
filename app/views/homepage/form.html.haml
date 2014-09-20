@@ -1,6 +1,7 @@
 - content_for :styles do
   - stylesheet_link_tag 'partials/header', 'form/form', 'partials/footer'
-
+-content_for :javascript do
+  - javascript_include_tag 'homepage'
 = render partial: "partials/header", locals: {name: @name}
 .profile_header Create Your Profile
 .form_container

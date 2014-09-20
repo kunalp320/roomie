@@ -8,4 +8,5 @@ $( document ).ready(function() {
     $('.sign_in_modal').removeClass('display_block');
     $('.sign_in_modal').addClass('display_none');
   });
+
 });
