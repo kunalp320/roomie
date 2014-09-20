@@ -1,7 +1,9 @@
 - content_for :styles do
-  - stylesheet_link_tag 'partials/header'
+  - stylesheet_link_tag 'partials/header', 'form/form', 'partials/footer'
 
 = render partial: "partials/header", locals: {name: @name}
 
-= form_tag '/results', method: :post do
-  = submit_tag "Submit Profile"
+= form_tag '/map', method: :post do
+  = submit_tag "Submit Profile", class: 'submit_profile'
+
+= render partial: 'partials/footer'

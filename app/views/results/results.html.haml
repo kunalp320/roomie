@@ -1,23 +1,9 @@
 - content_for :styles do
-  - stylesheet_link_tag 'homepage/results'
--content_for :javascript do
-  - javascript_include_tag 'map'
+  - stylesheet_link_tag 'homepage/results', 'partials/header', 'partials/footer'
 
-.header
-  .h1{class: 'title'} Hey Suren Nihalani
-  %button{class: 'login_button'} Login
+= render partial: 'partials/header', locals: {name: @name}
+
 
 .content_container 
-  #map_canvas
-  .scroll_pane
-    - @people.each do |person|
-      %a.data_container{href: '/profile'}
-        - unless person.nil?
-          - person.each do |key, value|  
-            .data #{key}:  #{value}
           
-
-.footer
-  .footer_links About Us
-  .footer_links FAQ
-  .footer_links Terms and Conditions
+= render partial: 'partials/footer'

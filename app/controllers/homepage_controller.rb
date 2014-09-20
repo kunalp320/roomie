@@ -1,6 +1,7 @@
 class HomepageController < ApplicationController
   
   def results
+    @name = "Kunal"
     @people = [ {name: "Kunal", hobbies: "Sports"},
                 {name: "Suren", hobbies: "Coding"},
                 {name: "Chris", hobbies: "FSU"},

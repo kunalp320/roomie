@@ -1,5 +1,5 @@
 - content_for :styles do
-  - stylesheet_link_tag 'homepage/homepage', 'sign_in_modal'
+  - stylesheet_link_tag 'homepage/homepage', 'sign_in_modal', 'partials/footer'
 -content_for :javascript do
   - javascript_include_tag 'homepage'
 
@@ -21,6 +21,8 @@
   .catch_phrase_container
     .catch_phrase Moving somewhere new can be scary. 
     .catch_phrase You don't have to do it alone.
+
+= render partial: 'partials/footer'
 
 
 

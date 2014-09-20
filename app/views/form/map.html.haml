@@ -1,0 +1,15 @@
+- content_for :styles do
+  - stylesheet_link_tag 'form/map', 'partials/header', 'partials/footer'
+
+- content_for :javascript do
+  - javascript_include_tag 'map'
+
+= render partial: "partials/header", locals: {name: @name}
+
+.content_container
+  %p.instructions Please highlight the regions that you would like to live in.
+  #map_canvas
+  %a.submit_profile{href: '/results'} Submit Location Preference
+
+= render partial: 'partials/footer'
+
