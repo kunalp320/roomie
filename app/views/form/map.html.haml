@@ -1,9 +1,6 @@
 - content_for :styles do
   - stylesheet_link_tag 'form/map', 'partials/header', 'partials/footer'
 
-- content_for :javascript do
-  - javascript_include_tag 'map'
-
 = render partial: "partials/header", locals: {name: @name}
 
 .content_container
@@ -12,4 +9,38 @@
   %a.submit_profile{href: '/results'} Submit Profile
 
 = render partial: 'partials/footer'
+
+:javascript
+  function initialize() {
+    var mapOptions = {
+      center: new google.maps.LatLng(-34.397, 150.644),
+      zoom: 8
+    };
+
+    var map = new google.maps.Map(document.getElementById('map_canvas'),
+      mapOptions);
+
+    var drawingManager = new google.maps.drawing.DrawingManager({
+      drawingMode: google.maps.drawing.OverlayType.MARKER,
+      drawingControl: true,
+      drawingControlOptions: {
+        position: google.maps.ControlPosition.TOP_CENTER,
+        drawingModes: [
+          google.maps.drawing.OverlayType.RECTANGLE
+        ]
+      },
+      rectangleOptions: {
+        editable: true
+      }
+    });
+    google.maps.event.addListener(drawingManager, 'overlaycomplete', function(event) {
+      if(event.type == google.maps.drawing.OverlayType.RECTANGLE) {
+        console.log(event);
+      }
+    });
+    drawingManager.setMap(map);
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
 
