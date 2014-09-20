@@ -12,16 +12,14 @@
 = render partial: 'partials/footer'
 
 :javascript
-  var shapes_added_so_far = []
-  var clear_all_shapes = function() {
+  var shapes_added_so_far = [];
+
+  $('.clear_button').click(function () {
     for(var i = 0; i < shapes_added_so_far.length; i++) {
       var item_to_clear = shapes_added_so_far[i];
       item_to_clear.setMap(null);  
     }
-  };
-
-  $('.clear_button').click(function () {
-    clear_all_shapes();
+    clear_all_shapes = [];
   });
 
   function initialize() {
@@ -51,7 +49,7 @@
       if(event.type == google.maps.drawing.OverlayType.RECTANGLE) {
         var shape_added = event.overlay;
         shapes_added_so_far.push(shape_added);
-        console.log(shapes_added_so_far);
+        shape_added.setEditable(false);
       }
     });
 
