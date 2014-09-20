@@ -1,8 +1,20 @@
+.header {
+  background-color: #33CCFF;
+  height: 100px;
+}
 .title {
   float: left;
 }
 .login_button {
-  width: 100px;
+  width: 50px;
   height: 50px;
+  padding: 10px 0 10px 0;
   float:  right;
+}
+
+#map_canvas {
+  clear: both;
+  margin: 10px auto;
+  width: 800px;
+  height: 500px;
 }

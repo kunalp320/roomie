@@ -2,13 +2,19 @@
 <html>
 <head>
   <title>Roomie</title>
-  
+  <%= stylesheet_link_tag 'global' %>
+   <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js', 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js' %>
   <%= yield :styles %>
+  <%= yield :javascript %>
+  <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD27GrdLMvu1q6naPlZfbf9-aeq2z16T8o">
+  </script>
 
 </head>
 <body>
-
-  <%= yield %>
+  <div class='container'>
+    <%= yield %>
+  </div>
 
 </body>
 </html>

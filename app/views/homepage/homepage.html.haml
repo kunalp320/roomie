@@ -1,6 +1,9 @@
 - content_for :styles do
   - stylesheet_link_tag 'homepage/homepage'
+-content_for :javascript do
+  - javascript_include_tag 'map'
 
 .header
   .h1{class: 'title'} Hey Suren Nihalani
   %button{class: 'login_button'} Login
+#map_canvas
