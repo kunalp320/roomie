@@ -13,6 +13,8 @@ class HomepageController < ApplicationController
     render 'results/results'
   end
 
+  def form
+  end
 
   def index
     render 'homepage/homepage'

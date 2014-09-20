@@ -2,20 +2,21 @@
   - stylesheet_link_tag 'homepage/homepage', 'sign_in_modal'
 -content_for :javascript do
   - javascript_include_tag 'homepage'
+
 .page_container
   .content_container
     %a.login_button Sign In    
   #login_modal{class: 'sign_in_modal display_none'}
     %a.close Close
-    %h2 Modal Box
-    = form_tag '/search', method: :post do
+    = form_tag '/form', method: :post do
       .form_field
-        .email_field_text Email:
-        %input{class: 'email_input', placeholder: "xyz@gatech.edu"}
-      .form_field
-        .password_field_text Password:
-        %input{class: 'email_input', placeholder: "****"}
-      = submit_tag "SEARCH"
+        .input_data
+          .field_text Email:
+          %input{class: 'input_field', placeholder: "xyz@gatech.edu"}
+        .form_field
+          .field_text Password:
+          %input{class: 'input_field', placeholder: "****"}
+        = submit_tag "Begin your search", class: 'search'
 
   .catch_phrase_container
     .catch_phrase Moving somewhere new can be scary. 
