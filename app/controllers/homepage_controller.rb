@@ -1,10 +1,8 @@
-class HomepageController < ActionController::Base
+class HomepageController < ApplicationController
   
   def index
     render 'homepage/homepage'
   end
-
-  
 
 
   
