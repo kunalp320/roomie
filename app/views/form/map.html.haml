@@ -19,10 +19,10 @@
       item_to_clear.setMap(null);  
     }
   };
-  google.maps.event.addDomListener(
-    $('.clear_button')[0], 
-    'click', 
-    clear_all_shapes);
+
+  $('.clear_button').click(function () {
+    clear_all_shapes();
+  });
 
   function initialize() {
     var mapOptions = {
