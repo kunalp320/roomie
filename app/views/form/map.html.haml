@@ -12,6 +12,18 @@
 = render partial: 'partials/footer'
 
 :javascript
+  var shapes_added_so_far = []
+  var clear_all_shapes = function() {
+    for(var i = 0; i < shapes_added_so_far.length; i++) {
+      var item_to_clear = shapes_added_so_far[i];
+      item_to_clear.setMap(null);  
+    }
+  };
+  google.maps.event.addDomListener(
+    $('.clear_button')[0], 
+    'click', 
+    clear_all_shapes);
+
   function initialize() {
     var mapOptions = {
       center: new google.maps.LatLng(-34.397, 150.644),
@@ -34,11 +46,15 @@
         editable: true
       }
     });
+
     google.maps.event.addListener(drawingManager, 'overlaycomplete', function(event) {
       if(event.type == google.maps.drawing.OverlayType.RECTANGLE) {
-        console.log(event);
+        var shape_added = event.overlay;
+        shapes_added_so_far.push(shape_added);
+        console.log(shapes_added_so_far);
       }
     });
+
     drawingManager.setMap(map);
   }
 
