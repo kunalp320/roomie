@@ -2,7 +2,66 @@
   width: 1280px;
   margin: 10px auto;
 }
-
+.profile_header {
+  width: 250px;
+  font-size: 28px;
+  color: #009933;
+  text-align: center;
+  margin: 20px 0 0 20px;
+  font-weight: 900px;
+  font-family: 'Helvetica Neue Bold', 'Helvetica Neue';
+}
+.form_container {
+  width: 1230px;
+  height: 1030px; 
+  margin: 40px 30px;
+  border: 1px solid;
+}
+.input_components {
+  margin: 50px;
+}
+.field_text {
+  float: left;
+  margin-top: 8px;
+  margin-left: 73px;
+  width: 200px;
+  height: 25px;
+  color: #484848;
+  font-size: 20px;
+}
+.data_point {
+  clear: both;
+}
+.input_field {
+  width: 400px;
+  height: 25px;
+  float: left;
+  margin-bottom: 25px;
+  margin-left: 30px;
+  font-size: 13px;
+  text-align: left;
+}
+.cancel_button {
+  width: 200px;
+  height: 50px;
+  background-color: #009933;
+  opacity: 0.8;
+  display: block;
+  border-radius: 25px;
+  box-sizing: border-box;
+  padding: 12px 6px 3px;
+  float: left;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 900px;
+  word-spacing: 0px;
+}
+.cancel_text {
+  width: 200px;
+  height: 50px;
+}
 .submit_profile {
   width: 200px;
   height: 50px;
@@ -10,10 +69,10 @@
   opacity: 0.8;
   text-align: center;
   font-size: 18px;
+  font-weight: 900px;
   color: #FFFFFF;
   border: 2px solid;
   border-radius: 25px;
-  border-box: box-sizing;
-  float: right;
+  border-sizing: border-box;
   text-decoration: none;
 }

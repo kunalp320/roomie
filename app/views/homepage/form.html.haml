@@ -2,8 +2,41 @@
   - stylesheet_link_tag 'partials/header', 'form/form', 'partials/footer'
 
 = render partial: "partials/header", locals: {name: @name}
-
-= form_tag '/map', method: :post do
-  = submit_tag "Submit Profile", class: 'submit_profile'
-
+.profile_header Create Your Profile
+.form_container
+  = form_tag '/map', method: :post do
+    .input_components
+      .data_point
+        .field_text Name:
+        %input{class: 'input_field'}
+      .data_point
+        .field_text School:
+        %input{class: 'input_field'}
+      .data_point
+        .field_text Graduating Year:
+        %input{class: 'input_field'}
+      .data_point
+        .field_text Job Title:
+        %input{class: 'input_field'}
+      .data_point
+        .field_text New Location:
+        %input{class: 'input_field'}
+      .data_point
+        .field_text Smoking
+        %input{class: 'input_field'}
+      .data_point
+        .field_text Cleanliness:
+        %input{class: 'input_field'}
+      .data_point
+        .field_text Preferred Roommate:
+        %input{class: 'input_field'}
+      .data_point
+        .field_text Hobbies:
+        %input{class: 'input_field'}
+      .data_point
+        .field_text Currently have a room
+        %input{class: 'input_field'}
+    = submit_tag "Submit Profile", class: 'submit_profile'
+    %a.cancel_button{href: '/'} Cancel
+    
 = render partial: 'partials/footer'
