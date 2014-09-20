@@ -12,9 +12,34 @@
   float:  right;
 }
 
-#map_canvas {
-  clear: both;
+.content_container {
+  width: 1280px;
+  height: 500px;
   margin: 10px auto;
+}
+#map_canvas {
   width: 800px;
   height: 500px;
+  float: left;
+}
+.scroll_pane {
+  background-color: red;
+  height: 500px;
+  float: right;
+}
+
+.data_container {
+  width: 480px;
+  height: 100px;
+}
+
+
+.footer {
+  clear: both;
+  height: 100px;
+  background-color: #33CCFF;
+}
+.footer_links {
+  float: left;
+  margin: 50px 40px;
 }
