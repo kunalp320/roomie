@@ -1,8 +1,9 @@
 - content_for :styles do
-  - stylesheet_link_tag 'homepage/homepage', 'sign_in_modal', 'partials/footer'
+  - stylesheet_link_tag 'homepage/homepage', 'sign_in_modal', 'partials/footer', 'partials/header'
 -content_for :javascript do
   - javascript_include_tag 'homepage'
 
+= render partial: 'partials/header'
 .page_container
   .content_container
     %a.login_button Sign In    

@@ -8,10 +8,12 @@
   color: #FFFFFF;
   border: 2px solid;
   border-radius: 25px;
-  border-box: box-sizing;
+  box-sizing: border-box;
   float: right;
   margin: -100px 75px;
+  display: block;
   text-decoration: none;
+  padding: 10px 2px 6px;
 }
 
 #map_canvas {

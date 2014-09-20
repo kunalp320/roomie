@@ -15,7 +15,8 @@
       .data_point
         .field_text Graduating Year:
         .input_field
-          %select{class: 'input_field'}
+          %select{class: 'select_field'}
+            %option{class: 'input_field'} Select a Year
             - (2010..2018).each do |year|
               %option{class: 'input_field'} #{year}
       .data_point
@@ -25,21 +26,31 @@
         .field_text New Location:
         %input{class: 'input_field'}
       .data_point
-        .field_text Smoking
-        %input{class: 'input_field'}
+        .field_text Smoking:
+        .input_field
+          %select{class: 'select_field'}
+            %option{class: 'input_field'} Select
+            %option{class: 'input_field'} Yes
+            %option{class: 'input_field'} No
       .data_point
         .field_text Cleanliness:
         %input{class: 'input_field'}
       .data_point
         .field_text Preferred Roommate:
-        %input{class: 'input_field'}
+        .input_field
+          %select{class: 'select_field'}
+            %option{class: 'input_field'} Select
+            %option{class: 'input_field'} Male
+            %option{class: 'input_field'} Female
+            %option{class: 'input_field'} Doesn't Matter
       .data_point
         .field_text Hobbies:
-        %input{class: 'input_field'}
+        %textarea{class: 'hobbies_field'}
       .data_point
-        .field_text Currently have a room
-        %input{class: 'input_field'}
-    = submit_tag "Submit Profile", class: 'submit_profile'
+        .field_text Vacant Room Available?
+        .input_field
+          %input{type: 'checkbox', class: 'vacant_room'}
+    = submit_tag "Select Locations", class: 'submit_profile'
     %a.cancel_button{href: '/'} Cancel
     
 = render partial: 'partials/footer'
