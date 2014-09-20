@@ -85,6 +85,24 @@
   width: 200px;
   height: 50px;
 }
+.login_button {
+  width: 200px;
+  height: 50px;
+  background-color: #009933;
+  opacity: 0.8;
+  text-align: center;
+  font-size: 18px;
+  color: #FFFFFF;
+  float: left;
+  font-family: 'Helvetica Neue';
+  border: 2px solid;
+  border-radius: 25px;
+  box-sizing: border-box;
+  margin: 15px 15px;
+  display: block;
+  text-decoration: none;
+  padding: 10px 2px 6px;
+}
 .submit_profile {
   float: right;
   width: 200px;

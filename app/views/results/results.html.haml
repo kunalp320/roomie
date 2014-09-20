@@ -1,10 +1,22 @@
 - content_for :styles do
   - stylesheet_link_tag 'homepage/results', 'partials/header', 'partials/footer'
 -content_for :javascript do
-  - javascript_include_tag 'homepage'
+  - javascript_include_tag 'result_map'
+
 = render partial: 'partials/header', locals: {name: @name}
 
-
 .content_container 
+  #map_canvas
+  .results_panel
+    .results_header People in your area
+    .results_data
+      - @people.each do |person|
+        %a.data_point{href: '/profile'}
+          .personal_data
+            - person.each do |key, value|
+              .data_value #{value.capitalize}
+          .friends Friends in Common
+
+
           
 = render partial: 'partials/footer'

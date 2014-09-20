@@ -21,5 +21,9 @@ class HomepageController < ApplicationController
   def index
     render 'homepage/homepage'
   end
+
+  def profile
+    render 'profile/profile'
+  end
   
 end

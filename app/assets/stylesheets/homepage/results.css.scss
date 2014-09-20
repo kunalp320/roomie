@@ -23,3 +23,59 @@
   height: 100px;
 }
 
+
+#map_canvas {
+  width: 50%;
+  height: 500px;
+  float: left;
+}
+.results_panel {
+  width: 50%;
+  float: left;
+  height: 500px;
+}
+.results_header {
+  width: 100%;
+  height: 50px;
+  background-color: #009933;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 6px 2px 3px;
+  box-sizing: border-box;
+}
+.clearfix {
+  clear: both;
+}
+.results_data {
+  clear: both;
+  width: 100%;
+  height: 450px;
+  overflow-y: scroll;
+}
+.data_point {
+  text-decoration: none;
+  width: 99%;
+  height: 110px;
+  display: block;
+  border: 2px solid;
+}
+.personal_data {
+  width: 50%;
+  font-size: 20px;
+  float: left;
+  margin: 20px 0 0 0;
+}
+.data_value {
+  float: left;
+  font-size: 20px;
+  width: 20%;
+  margin: 0 50px 0 100px;
+}
+.friends {
+  float: left;
+  font-style: italic;
+  width: 50%;
+  font-size: 20px;
+  margin: 20px 0 0 0;
+}
