@@ -14,6 +14,7 @@ class HomepageController < ApplicationController
   end
 
   def form
+    @name = "Kunal"
   end
 
   def index
