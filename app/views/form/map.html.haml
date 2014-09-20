@@ -29,6 +29,14 @@
           google.maps.drawing.OverlayType.RECTANGLE
         ]
       },
+      rectangleOptions: {
+        editable: true
+      }
+    });
+    google.maps.event.addListener(drawingManager, 'overlaycomplete', function(event) {
+      if(event.type == google.maps.drawing.OverlayType.RECTANGLE) {
+        console.log(event);
+      }
     });
     drawingManager.setMap(map);
   }
