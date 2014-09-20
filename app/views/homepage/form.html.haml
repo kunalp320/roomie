@@ -14,7 +14,10 @@
         %input{class: 'input_field'}
       .data_point
         .field_text Graduating Year:
-        %input{class: 'input_field'}
+        .input_field
+          %select{class: 'input_field'}
+            - (2010..2018).each do |year|
+              %option{class: 'input_field'} #{year}
       .data_point
         .field_text Job Title:
         %input{class: 'input_field'}
