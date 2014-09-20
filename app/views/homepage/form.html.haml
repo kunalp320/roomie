@@ -51,6 +51,9 @@
         .field_text Vacant Room Available?
         .input_field
           %input{type: 'checkbox', class: 'vacant_room'}
+      .data_point
+        .field_text{style: 'margin-top: 29px;'} Facebook Link:
+        %input{class: 'input_field', style: 'margin-top: 25px;'}
     = submit_tag "Select Locations", class: 'submit_profile'
     %a.cancel_button{href: '/'} Cancel
     
