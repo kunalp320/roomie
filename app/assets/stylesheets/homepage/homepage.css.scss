@@ -16,42 +16,6 @@
   cursor: pointer;
 }
 
-.close {
-  float: right;
-  text-decoration: none;
-  color: red;
-  cursor: pointer;
-}
-
-.input_field_text {
-  font-size: 20px;
-  color: #009933;
-  float: left;
-  margin-right: 50px;
-  text-align: center;
-}
-
-.text_input {
-  margin-left: 10px;
-}
-.display_none {
-  display: none;
-}
-.display_block {
-  display: block;
-}
-
-.sign_in_modal {
-  position: absolute;
-  width: 464px;
-  height: 230px;
-  margin: -450px auto 0 500px;
-  font-family: Arial, Helvetica, sans-serif;
-  background: white;
-  -webkit-transition: opacity 400ms ease-in;
-  -moz-transition: opacity 400ms ease-in;
-  transition: opacity 400ms ease-in;
-}
 
 .catch_phrase_container {
   margin: -100px auto 0 auto; 

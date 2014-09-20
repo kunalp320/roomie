@@ -1,5 +1,5 @@
 - content_for :styles do
-  - stylesheet_link_tag 'homepage/homepage'
+  - stylesheet_link_tag 'homepage/homepage', 'sign_in_modal'
 -content_for :javascript do
   - javascript_include_tag 'homepage'
 .page_container
@@ -10,11 +10,11 @@
     %h2 Modal Box
     = form_tag '/search', method: :post do
       .form_field
-        .input_field_text Email:
+        .email_field_text Email:
         %input{class: 'email_input', placeholder: "xyz@gatech.edu"}
       .form_field
-        .input_field_text Password:
-        %input{class: 'password_input', placeholder: "****"}
+        .password_field_text Password:
+        %input{class: 'email_input', placeholder: "****"}
       = submit_tag "SEARCH"
 
   .catch_phrase_container
