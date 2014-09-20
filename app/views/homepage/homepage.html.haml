@@ -1,23 +1,25 @@
 - content_for :styles do
   - stylesheet_link_tag 'homepage/homepage'
 -content_for :javascript do
-  - javascript_include_tag 'map'
+  - javascript_include_tag 'homepage'
+.page_container
+  .content_container
+    %a.login_button Sign In    
+  #login_modal{class: 'sign_in_modal display_none'}
+    %a.close Close
+    %h2 Modal Box
+    = form_tag '/search', method: :post do
+      .form_field
+        .input_field_text Email:
+        %input{class: 'email_input', placeholder: "xyz@gatech.edu"}
+      .form_field
+        .input_field_text Password:
+        %input{class: 'password_input', placeholder: "****"}
+      = submit_tag "SEARCH"
 
-.header
-  .h1{class: 'title'} Hey Suren Nihalani
-  %button{class: 'login_button'} Login
+  .catch_phrase_container
+    .catch_phrase Moving somewhere new can be scary. 
+    .catch_phrase You don't have to do it alone.
 
-.content_container 
-  #map_canvas
-  .scroll_pane
-    - @people.each do |person|
-      .data_container
-        - unless person.nil?
-          - person.each do |key, value|  
-            .data #{key}:  #{value}
-          
 
-.footer
-  .footer_links About Us
-  .footer_links FAQ
-  .footer_links Terms and Conditions
+

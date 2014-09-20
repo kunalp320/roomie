@@ -1,3 +1,5 @@
 Rails.application.config.assets.precompile += %w(homepage/homepage.css)
 Rails.application.config.assets.precompile += %w( global.css )
 Rails.application.config.assets.precompile += %w( map.js )
+Rails.application.config.assets.precompile += %w( homepage/results.css )
+Rails.application.config.assets.precompile += %w( homepage.js )

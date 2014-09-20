@@ -1,45 +1,64 @@
-.header {
-  background-color: #33CCFF;
-  height: 100px;
-}
-.title {
-  float: left;
-}
-.login_button {
-  width: 50px;
-  height: 50px;
-  padding: 10px 0 10px 0;
-  float:  right;
-}
-
 .content_container {
-  width: 1280px;
-  height: 500px;
-  margin: 10px auto;
+  width: 1020px;
+  height: 640px;
+  margin: 0 auto;
+  background-image: url('/assets/homepage-cover.jpg');
+  font-size: 36px;
+  color: #FFFFFF;
 }
-#map_canvas {
-  width: 800px;
-  height: 500px;
-  float: left;
-}
-.scroll_pane {
-  background-color: red;
-  height: 500px;
+
+.login_button {
+  font-size: 20px;
   float: right;
+  margin: 10px 10px;  
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.data_container {
-  width: 480px;
-  height: 100px;
+.close {
+  float: right;
+  text-decoration: none;
+  color: red;
+  cursor: pointer;
 }
 
-
-.footer {
-  clear: both;
-  height: 100px;
-  background-color: #33CCFF;
-}
-.footer_links {
+.input_field_text {
+  font-size: 20px;
+  color: #009933;
   float: left;
-  margin: 50px 40px;
+  margin-right: 50px;
+  text-align: center;
+}
+
+.text_input {
+  margin-left: 10px;
+}
+.display_none {
+  display: none;
+}
+.display_block {
+  display: block;
+}
+
+.sign_in_modal {
+  position: absolute;
+  width: 464px;
+  height: 230px;
+  margin: -450px auto 0 500px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+
+.catch_phrase_container {
+  margin: -100px auto 0 auto; 
+  height: 100px;
+  text-align: center;
+}
+.catch_phrase {
+  color: white;
+  font-size: 36px;
 }

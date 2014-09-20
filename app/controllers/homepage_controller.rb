@@ -1,14 +1,21 @@
 class HomepageController < ApplicationController
   
-  def index
+  def results
     @people = [ {name: "Kunal", hobbies: "Sports"},
                 {name: "Suren", hobbies: "Coding"},
                 {name: "Chris", hobbies: "FSU"},
                 {name: "Daniel", hobbies: "UI"},
+                {name: "Kunal", hobbies: "Sports"},
+                {name: "Suren", hobbies: "Coding"},
+                {name: "Chris", hobbies: "FSU"},
+                {name: "Daniel", hobbies: "UI"},
               ]
-    render 'homepage/homepage'
+    render 'results/results'
   end
 
 
+  def index
+    render 'homepage/homepage'
+  end
   
 end
