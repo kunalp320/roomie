@@ -1,0 +1,47 @@
+.close {
+  float: right;
+  text-decoration: none;
+  color: red;
+  cursor: pointer;
+}
+
+.email_field_text {
+  position: absolute;
+  margin-top: 99px;
+  margin-left: 73px;
+  
+  width: 82px;
+  height: 25px;
+  color: #009933;
+}
+.password_field_text {
+
+}
+.text_input {
+
+}
+.display_none {
+  display: none;
+}
+.display_block {
+  display: block;
+}
+
+.sign_in_modal {
+  position: absolute;
+  width: 464px;
+  height: 230px;
+  margin: -450px auto 0 500px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+
+.email_input {
+  width: 200px;
+  height: 25px;
+  position: absolute;
+  margin: 0 0 5px 0;
+}
