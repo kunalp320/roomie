@@ -51,8 +51,8 @@ var map;
 
   function initialize() {
     var mapOptions = {
-      center: new google.maps.LatLng(-34.397, 150.644),
-      zoom: 8
+      center: new google.maps.LatLng(37.7833, -122.4167),
+      zoom: 12
     };
 
     map = new google.maps.Map(document.getElementById('map_canvas'),
@@ -89,4 +89,72 @@ var map;
 
 
   initialize();
+
+  $('.cb1').change(function () {
+    if($(this).is(":checked")) {
+      $.ajax({
+
+        type: "GET",
+        url: '/yelp_prefs',
+        data: {type: 'food'},
+        success: function(data) {
+          put_markers_on_map(data)
+          
+          
+        },
+        error: function(data) {
+          alert(data)
+        }
+      });
+    }
+  });
+    $('.cb2').change(function () {
+      if($(this).is(":checked")) {
+        $.ajax({
+
+          type: "GET",
+          url: '/yelp_prefs',
+          data: {type: 'coffee'},
+          success: function(data) {
+            put_markers_on_map(data)
+            
+          },
+          error: function(data) {
+            alert(data)
+          }
+        });
+      }
+  });
+  $('.cb3').change(function () {
+    if($(this).is(":checked")) {
+      $.ajax({
+
+        type: "GET",
+        url: '/yelp_prefs',
+        data: {type: 'bars'},
+        success: function(data) {
+          put_markers_on_map(data)
+        },
+        error: function(data) {
+          alert(data)
+        }
+      });
+    }
+  });  
+  $('.cb4').change(function () {
+    if($(this).is(":checked")) {
+      $.ajax({
+
+        type: "GET",
+        url: '/yelp_prefs',
+        data: {type: 'clubs'},
+        success: function(data) {
+          put_markers_on_map(data)
+        },
+        error: function(data) {
+          alert(data)
+        }
+      });
+    }
+  });
 });

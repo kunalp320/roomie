@@ -55,7 +55,7 @@ class HomepageController < ApplicationController
         
         lat = position.location.coordinate.latitude
         long = position.location.coordinate.longitude
-        data << {lat: lat, long: long}
+        data << {lat: lat, long: long, title: position.name + "  (#{type})"}
       end
     end
     puts data

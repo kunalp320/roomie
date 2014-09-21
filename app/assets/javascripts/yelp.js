@@ -8,7 +8,7 @@ $( document ).ready(function() {
         url: '/yelp_prefs',
         data: {type: 'food'},
         success: function(data) {
-          console.log(data[0].lat)
+          put_markers_on_map(data)
           
           
         },
