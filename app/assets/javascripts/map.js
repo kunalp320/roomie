@@ -123,9 +123,9 @@ var last_info_window;
         }
       });
     }
-      else {
-
-      }
+    else {
+      clear_markers_of_type("food")
+    }
     
   });
     $('.cb2').change(function () {
@@ -145,7 +145,7 @@ var last_info_window;
         });
       }
       else {
-
+        clear_markers_of_type("coffee")
       }
   });
   $('.cb3').change(function () {
@@ -164,7 +164,7 @@ var last_info_window;
       });
     }
     else {
-
+      clear_markers_of_type("bars")
     }
   });  
   $('.cb4').change(function () {
@@ -183,7 +183,7 @@ var last_info_window;
       });
     }
     else {
-      
+      clear_markers_of_type("clubs")
     }
   });
 });
