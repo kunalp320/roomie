@@ -1,0 +1,48 @@
+.name {
+  font-size: 28px;
+  color: #009933;
+  font-weight: 900px;
+  font-family: 'Helvetica Neue Bold';
+  margin: 20px 0 0 50px;
+}
+
+.profile_container {
+  width: 80%;
+  height: 1056px;
+  border: 2px solid;
+  margin: 20px 0 20px 20px;
+}
+
+.profile_picture {
+  float: left;
+  background-image: url('/assets/profile_pic.jpg');
+  width: 40%;
+  height: 450px;
+  margin: 20px 0 20px 20px;
+}
+
+.data_point {
+  width: 50%;
+  float: left;
+}
+.data_keys {
+  width: 25%;
+  font-family: 'Helvetica Neue';
+  float: left;
+  font-size: 20px;
+  margin: 20px 0 0 100px;
+}
+
+.data_values {
+  width: 45%;
+  font-family: 'Helvetica Neue';
+  float: left;
+  font-size: 20px;
+  margin: 20px 0 0 50px;
+}
+#map_canvas {
+  margin: 20px 20px 0 20px;
+  width: 800px;
+  height: 500px;
+  float: left;
+}
