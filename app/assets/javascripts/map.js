@@ -2,8 +2,10 @@ $( document ).ready(function() {
 var shapes_added_so_far = [];
 var map;
 var last_info_window;
+var type_to_markers = {};
 
-  function put_markers_on_map(list_of_marker_coords) {
+  function put_markers_on_map(type_of_marker, list_of_marker_coords) {
+    var all_markers = [];
     for(var i = 0; i < list_of_marker_coords.length; i++) {
       var coords = list_of_marker_coords[i];
       var lat = coords['lat'];
@@ -28,6 +30,15 @@ var last_info_window;
           last_info_window = _info_window;
         }.bind(undefined, marker, info_window)
       );
+      all_markers.push(marker);
+    }
+    type_to_markers[type_of_marker] = all_markers;
+  }
+
+  function clear_markers_of_type(type_to_clear) {
+    var all_markers = type_to_markers[type_to_clear];
+    for(var i = 0; i < all_markers.length; i++) {
+      all_markers[i].setMap(null);
     }
   }
 
