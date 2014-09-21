@@ -23,6 +23,7 @@ class HomepageController < ApplicationController
   end
 
   def profile
+    @name = "Suren"
     render 'profile/profile'
   end
   

@@ -6,19 +6,9 @@
 = render partial: 'partials/header'
 .page_container
   .content_container
-    %a.login_button Sign In    
-  #login_modal{class: 'sign_in_modal display_none'}
-    %a.close Close
-    = form_tag '/form', method: :post do
-      .form_field
-        .input_data
-          .field_text Email:
-          %input{class: 'input_field', placeholder: "xyz@gatech.edu"}
-        .form_field
-          .field_text Password:
-          %input{class: 'input_field', placeholder: "****"}
-        = submit_tag "Begin your search", class: 'search'
-
+    %a.login_button Sign In
+  = render partial: 'partials/login_modal'
+    
   .catch_phrase_container
     .catch_phrase Moving somewhere new can be scary. 
     .catch_phrase You don't have to do it alone.

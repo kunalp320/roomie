@@ -1,1 +1,40 @@
-= render partial: 'partials/header'
+- content_for :styles do
+  - stylesheet_link_tag 'partials/header', 'partials/footer', 'profile/profile'
+
+- content_for :javascript do
+  - javascript_include_tag 'result_map.js'
+
+= render partial: 'partials/header', locals: {name: @name}
+
+.name Suren
+.profile_container 
+  .profile_picture
+  .data_point
+    .data_keys Name:
+    .data_values Suren
+  .data_point
+    .data_keys School/Year:
+    .data_values 2014
+  .data_point
+    .data_keys Occupation:
+    .data_values Software Engineer
+  .data_point
+    .data_keys Location:
+    .data_values Atlanta, GA
+  .data_point
+    .data_keys Smoking:
+    .data_values No
+  .data_point
+    .data_keys Cleanliness:
+    .data_values 1/10
+  .data_point
+    .data_keys Preferred Roommate:
+    .data_values Male
+  .data_point
+    .data_keys Hobbies:
+    .data_values Coding, Coding, Coding
+  .data_point
+    .data_keys Mutual Friends:
+    .data_values Russians, Russians, Russians
+  #map_canvas
+= render partial: 'partials/footer'

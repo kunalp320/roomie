@@ -8,14 +8,15 @@
   color: #FFFFFF;
   font-family: 'Helvetica Neue';
   border: 2px solid;
-  border-radius: 25px;
+  border-radius: 15px;
   box-sizing: border-box;
   float: right;
-  margin: -100px 75px;
+  margin: -65px 20px;
   display: block;
   text-decoration: none;
   padding: 10px 2px 6px;
   clear: both;
+  cursor: pointer;
 }
 
 #map_canvas {
@@ -34,12 +35,13 @@
   float: left;
   font-family: 'Helvetica Neue';
   border: 2px solid;
-  border-radius: 25px;
+  border-radius: 15px;
   box-sizing: border-box;
   margin: 0 15 px;
   display: block;
   text-decoration: none;
   padding: 10px 2px 6px;
+  cursor: pointer;
 }
 .instructions {
   color: #009933;

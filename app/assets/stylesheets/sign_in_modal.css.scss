@@ -34,7 +34,7 @@
   -moz-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
   border: 2px solid;
-  border-radius: 20px;
+  border-radius: 15px;
   box-sizing: border-box;
 }
 .input_data {
@@ -60,6 +60,7 @@
   font-size: 18px;
   color: #FFFFFF;
   border: 2px solid;
-  border-radius: 25px;
+  border-radius: 15px;
   border-box: box-sizing;
+  cursor: pointer;
 }

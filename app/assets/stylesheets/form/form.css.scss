@@ -13,7 +13,7 @@
 }
 .form_container {
   width: 1230px;
-  height: 1030px; 
+  height: 750px; 
   margin: 40px 30px;
   border: 1px solid;
 }
@@ -69,7 +69,7 @@
   background-color: #009933;
   opacity: 0.8;
   display: block;
-  border-radius: 25px;
+  border-radius: 15px;
   font-family: 'Helvetica Neue';
   box-sizing: border-box;
   padding: 12px 6px 3px;
@@ -80,6 +80,7 @@
   text-decoration: none;
   font-weight: 900px;
   word-spacing: 0px;
+  cursor: pointer;
 }
 .cancel_text {
   width: 200px;
@@ -96,12 +97,13 @@
   float: left;
   font-family: 'Helvetica Neue';
   border: 2px solid;
-  border-radius: 25px;
+  border-radius: 15px;
   box-sizing: border-box;
   margin: 15px 15px;
   display: block;
   text-decoration: none;
   padding: 10px 2px 6px;
+  cursor: pointer;
 }
 .submit_profile {
   float: right;
@@ -115,7 +117,8 @@
   font-weight: 900px;
   color: #FFFFFF;
   border: 2px solid;
-  border-radius: 25px;
+  border-radius: 15px;
   border-sizing: border-box;
   text-decoration: none;
+  cursor: pointer;
 }
