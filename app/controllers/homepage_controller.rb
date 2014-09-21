@@ -15,12 +15,13 @@ class HomepageController < ApplicationController
     render 'results/results'
   end
 
-  
-  
-  
-
   def form
     @name = "Kunal"
+  end
+
+  def get_results
+    puts "here"
+    render json: {suces: "success"}
   end
 
   def index
