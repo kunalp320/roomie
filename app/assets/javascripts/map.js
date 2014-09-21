@@ -1,5 +1,19 @@
 $( document ).ready(function() {
 var shapes_added_so_far = [];
+var map;
+
+  function put_markers_on_map(list_of_marker_coords) {
+    for(var i = 0; i < list_of_marker_coords.length; i++) {
+      var coords = list_of_marker_coords[i];
+      var lat = coords['lat'];
+      var lon = coords['long'];
+      var lat_long = new google.maps.LatLng(lat, lon);
+      var marker = new google.maps.Marker({
+          position: lat_long,
+          map: map
+      });
+    }
+  }
 
   $('.submit_profile').click(
     function() {
@@ -41,7 +55,7 @@ var shapes_added_so_far = [];
       zoom: 8
     };
 
-    var map = new google.maps.Map(document.getElementById('map_canvas'),
+    map = new google.maps.Map(document.getElementById('map_canvas'),
       mapOptions);
 
     var drawingManager = new google.maps.drawing.DrawingManager({
@@ -67,6 +81,8 @@ var shapes_added_so_far = [];
         drawingManager.setDrawingMode(null);
       }
     });
+
+
 
     drawingManager.setMap(map);
   }
