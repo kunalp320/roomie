@@ -34,12 +34,32 @@ class HomepageController < ApplicationController
   end
 
   def yelp_prefs
-    client = Yelp::Client.new({ consumer_key: YOUR_CONSUMER_KEY,
-                            consumer_secret: YOUR_CONSUMER_SECRET,
-                            token: YOUR_TOKEN,
-                            token_secret: YOUR_TOKEN_SECRET
+    client = Yelp::Client.new({ consumer_key: "PBa1QqMWZhEn-axbRVGHjA",
+                            consumer_secret: "oHOXxfWO-oFL9_KX_5eClacM-M0",
+                            token: "7NH18JReQfACGZFSK8PdjSMQ7S6abdL-",
+                            token_secret: "aAZgRxWPxxrpzc8xVWF6gm0zIJQ"
                           })
-    return render 'profile/profile'
+    type = params[:type]
+    params = { term: type,
+           limit: 20
+         }
+    
+    locale = { lang: 'en' }
+    
+    response = client.search('San Francisco', params, locale)
+
+    data = []
+
+    response.businesses.each do |position|
+      if position.location.has_key?("coordinate")
+        
+        lat = position.location.coordinate.latitude
+        long = position.location.coordinate.longitude
+        data << {lat: lat, long: long}
+      end
+    end
+    puts data
+    render json: data
   end
   
 end
