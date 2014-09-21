@@ -26,5 +26,9 @@ class HomepageController < ApplicationController
     @name = "Suren"
     render 'profile/profile'
   end
+
+  def prefs
+    put 'lol'
+  end
   
 end
