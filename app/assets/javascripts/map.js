@@ -106,6 +106,9 @@ var map;
           alert(data)
         }
       });
+      else {
+
+      }
     }
   });
     $('.cb2').change(function () {
@@ -124,6 +127,9 @@ var map;
           }
         });
       }
+      else {
+
+      }
   });
   $('.cb3').change(function () {
     if($(this).is(":checked")) {
@@ -140,6 +146,9 @@ var map;
         }
       });
     }
+    else {
+
+    }
   });  
   $('.cb4').change(function () {
     if($(this).is(":checked")) {
@@ -155,6 +164,9 @@ var map;
           alert(data)
         }
       });
+    }
+    else {
+      
     }
   });
 });
