@@ -125,7 +125,7 @@ var type_to_markers = {};
         url: '/yelp_prefs',
         data: {type: 'food'},
         success: function(data) {
-          put_markers_on_map(data)
+          put_markers_on_map('food', data)
           
           
         },
@@ -147,7 +147,7 @@ var type_to_markers = {};
           url: '/yelp_prefs',
           data: {type: 'coffee'},
           success: function(data) {
-            put_markers_on_map(data)
+            put_markers_on_map('coffee', data)
             
           },
           error: function(data) {
@@ -167,7 +167,7 @@ var type_to_markers = {};
         url: '/yelp_prefs',
         data: {type: 'bars'},
         success: function(data) {
-          put_markers_on_map(data)
+          put_markers_on_map('bars', data)
         },
         error: function(data) {
           alert(data)
@@ -186,7 +186,7 @@ var type_to_markers = {};
         url: '/yelp_prefs',
         data: {type: 'clubs'},
         success: function(data) {
-          put_markers_on_map(data)
+          put_markers_on_map('clubs', data)
         },
         error: function(data) {
           alert(data)
