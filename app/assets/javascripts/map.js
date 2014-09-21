@@ -14,7 +14,8 @@ var type_to_markers = {};
       var lat_long = new google.maps.LatLng(lat, lon);
       var marker = new google.maps.Marker({
           position: lat_long,
-          map: map
+          map: map,
+          animation: google.maps.Animation.DROP
       });
       var info_window =  new google.maps.InfoWindow({
         content: title
