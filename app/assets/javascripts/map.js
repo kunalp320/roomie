@@ -108,10 +108,11 @@ var map;
           alert(data)
         }
       });
+    }
       else {
 
       }
-    }
+    
   });
     $('.cb2').change(function () {
       if($(this).is(":checked")) {
