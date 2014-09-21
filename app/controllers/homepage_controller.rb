@@ -28,7 +28,7 @@ class HomepageController < ApplicationController
   end
 
   def prefs
-    put 'lol'
+    return render 'profile/profile'
   end
   
 end

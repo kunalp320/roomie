@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   post '/map' => 'form#map', as: 'map'
   get '/results' => 'homepage#results', as: 'results'
   get '/profile' => 'homepage#profile', as: 'profile'
-  post '/save_prefs' => 'homepage#prefs', as: 'prefs'
+  get '/save_prefs' => 'homepage#prefs', as: 'prefs'
 end

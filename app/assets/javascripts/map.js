@@ -35,6 +35,16 @@ var shapes_added_so_far = [];
     google.maps.event.addListener(drawingManager, 'overlaycomplete', function(event) {
       if(event.type == google.maps.drawing.OverlayType.RECTANGLE) {
         var shape_added = event.overlay;
+        $.ajax({
+          type: "GET",
+          url: '/save_prefs',
+          success: function(data) {
+            alert("hello")
+          },
+          error: function(data) {
+            alert(data)
+          }
+        });
         shapes_added_so_far.push(shape_added);
         shape_added.setEditable(false);
         drawingManager.setDrawingMode(null);
