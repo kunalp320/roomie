@@ -11,18 +11,35 @@
   border-radius: 15px;
   box-sizing: border-box;
   float: right;
-  margin: -65px 20px;
+  margin: -73px 20px;
   display: block;
   text-decoration: none;
   padding: 10px 2px 6px;
   clear: both;
   cursor: pointer;
 }
-
+.yelp_data_container {
+  width: 500px;
+  height: 400px;
+  float: left;
+  border: 2px solid;
+  margin: 0 0 0 55px;
+}
+.checkboxes {
+  margin: 20px 20px;
+  float: left;
+  transform: scale(1.5);
+}
 #map_canvas {
   width: 800px;
   height: 500px;
   float: left;
+}
+.text {
+  float: left;
+  margin: 17px;
+  color: #009933;
+  font-size: 18px;
 }
 .clear_button {
   width: 200px;
@@ -37,7 +54,7 @@
   border: 2px solid;
   border-radius: 15px;
   box-sizing: border-box;
-  margin: 0 15 px;
+  margin: 23px 15px;
   display: block;
   text-decoration: none;
   padding: 10px 2px 6px;

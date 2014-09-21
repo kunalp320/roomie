@@ -8,6 +8,10 @@
 .content_container
   %p.instructions Select areas you want to live in:
   #map_canvas
+  .yelp_data_container
+    .data_point
+      %input{type: 'checkbox', class: 'checkboxes'}
+        .text Food
   .clear_button Clear Areas
   %a.submit_profile{href: '/results'} Submit Profile
 
