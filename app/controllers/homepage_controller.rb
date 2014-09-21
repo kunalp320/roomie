@@ -28,6 +28,7 @@ class HomepageController < ApplicationController
   end
 
   def prefs
+    puts params
     return render 'profile/profile'
   end
   
