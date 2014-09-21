@@ -1,20 +1,33 @@
 $( document ).ready(function() {
 var shapes_added_so_far = [];
 var map;
+var last_info_window;
 
   function put_markers_on_map(list_of_marker_coords) {
     for(var i = 0; i < list_of_marker_coords.length; i++) {
       var coords = list_of_marker_coords[i];
       var lat = coords['lat'];
       var lon = coords['long'];
-      var titl = coords['title'];
+      var title = coords['title'];
       var lat_long = new google.maps.LatLng(lat, lon);
-
       var marker = new google.maps.Marker({
           position: lat_long,
-          map: map,
-          title: titl
+          map: map
       });
+      var info_window =  new google.maps.InfoWindow({
+        content: title
+      });
+      google.maps.event.addListener(
+        marker, 
+        'click', 
+        function(_marker, _info_window) {
+          if (typeof last_info_window != 'undefined') {
+            last_info_window.close();
+          }
+          _info_window.open(map, _marker);
+          last_info_window = _info_window;
+        }.bind(undefined, marker, info_window)
+      );
     }
   }
 
@@ -86,6 +99,7 @@ var map;
 
 
 
+    drawingManager.setDrawingMode(null);
     drawingManager.setMap(map);
   }
 
