@@ -38,7 +38,7 @@ var shapes_added_so_far = [];
         $.ajax({
           type: "GET",
           url: '/save_prefs',
-          data: { 'here' : 'lol'} 
+          data: { 'here': 'lol'},
           success: function(data) {
             alert("hello")
           },
