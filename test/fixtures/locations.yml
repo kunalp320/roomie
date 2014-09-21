@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nw_lat: 1.5
+  nw_long: 1.5
+  se_lat: 1.5
+  se_long: 1.5
+
+two:
+  nw_lat: 1.5
+  nw_long: 1.5
+  se_lat: 1.5
+  se_long: 1.5
