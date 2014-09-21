@@ -21,7 +21,7 @@ class HomepageController < ApplicationController
 
   def get_results
     lol = []
-    Location.find.each do |item|
+    Location.all.each do |item|
       lol << {
         'n_lat'  => item.nw_lat, 
         'n_long' => item.nw_long, 
@@ -29,8 +29,8 @@ class HomepageController < ApplicationController
         's_long' => item.se_long
       }
     end
-
-    render json: lol
+    return render json: lol
+    
   end
 
   def index
