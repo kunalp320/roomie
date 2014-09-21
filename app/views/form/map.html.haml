@@ -1,7 +1,7 @@
 - content_for :styles do
   - stylesheet_link_tag 'form/map', 'partials/header', 'partials/footer'
 - content_for :javascript do
-  - javascript_include_tag 'map'
+  - javascript_include_tag 'map', 'yelp'
 
 = render partial: "partials/header", locals: {name: @name}
 
@@ -10,16 +10,16 @@
   #map_canvas
   .yelp_data_container
     .data_point
-      %input{type: 'checkbox', class: 'checkboxes'}
+      %input{type: 'checkbox', class: 'checkboxes cb1'}
         .text Restaurants
     .data_point
-      %input{type: 'checkbox', class: 'checkboxes'}
+      %input{type: 'checkbox', class: 'checkboxes cb2'}
         .text Coffee
     .data_point
-      %input{type: 'checkbox', class: 'checkboxes'}
+      %input{type: 'checkbox', class: 'checkboxes cb3'}
         .text Bars
     .data_point
-      %input{type: 'checkbox', class: 'checkboxes'}
+      %input{type: 'checkbox', class: 'checkboxes cb4'}
         .text Clubs
   .clear_button Clear Areas
   %a.submit_profile{href: '/results'} Submit Profile
