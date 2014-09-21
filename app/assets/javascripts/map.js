@@ -60,6 +60,10 @@ var type_to_markers = {};
           'length': all_locations.length
         },
         success: function(data) {
+          $.ajax({
+            type: "POST",
+            url: '/results'
+          });
           alert("hello");
         },
         error: function(data) {

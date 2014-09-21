@@ -12,7 +12,7 @@ class HomepageController < ApplicationController
                 {name: "Chris", hobbies: "FSU"},
                 {name: "Daniel", hobbies: "UI"},
               ]
-    render 'results/results'
+    redirect_to 'results/results'
   end
 
   def form
@@ -30,7 +30,23 @@ class HomepageController < ApplicationController
 
   def prefs
     puts params
-    return render 'profile/profile'
+    Location.delete_all()
+    all_data = params[:here]
+    length = params[:length].to_i
+    (0..(length - 1)).each {|i|
+      coords = all_data[i.to_s]
+      _s_lat = coords["0"][0]
+      _s_long = coords["0"][1]
+      _n_lat = coords["1"][0]
+      _n_long = coords["1"][1]
+      naw = Location.new(
+        nw_lat: _n_lat, 
+        nw_long: _n_long,
+        se_lat: _s_lat,
+        se_long: _s_long)
+      naw.save
+    }
+    return render json: 'success'    
   end
 
   def yelp_prefs
