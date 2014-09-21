@@ -60,13 +60,11 @@ var type_to_markers = {};
           'length': all_locations.length
         },
         success: function(data) {
-          $.ajax({
-            type: "POST",
-            url: '/results'
-          });
-          alert("hello");
+          window.location.href = '/results'
+          
         },
         error: function(data) {
+          alert("here")
           alert(data);
         }
       });

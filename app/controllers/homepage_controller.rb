@@ -12,8 +12,12 @@ class HomepageController < ApplicationController
                 {name: "Chris", hobbies: "FSU"},
                 {name: "Daniel", hobbies: "UI"},
               ]
-    redirect_to 'results/results'
+    render 'results/results'
   end
+
+  
+  
+  
 
   def form
     @name = "Kunal"
@@ -46,7 +50,7 @@ class HomepageController < ApplicationController
         se_long: _s_long)
       naw.save
     }
-    return render json: 'success'    
+    render 'profile/profile'
   end
 
   def yelp_prefs
