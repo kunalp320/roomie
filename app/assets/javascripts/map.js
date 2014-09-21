@@ -37,10 +37,13 @@ var shapes_added_so_far = [];
         var shape_added = event.overlay;
         shapes_added_so_far.push(shape_added);
         shape_added.setEditable(false);
+        drawingManager.setDrawingMode(null);
       }
     });
 
     drawingManager.setMap(map);
   }
+
+
   initialize();
 });
