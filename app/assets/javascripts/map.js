@@ -7,10 +7,13 @@ var map;
       var coords = list_of_marker_coords[i];
       var lat = coords['lat'];
       var lon = coords['long'];
+      var titl = coords['title'];
       var lat_long = new google.maps.LatLng(lat, lon);
+
       var marker = new google.maps.Marker({
           position: lat_long,
-          map: map
+          map: map,
+          title: titl
       });
     }
   }
@@ -75,7 +78,6 @@ var map;
     google.maps.event.addListener(drawingManager, 'overlaycomplete', function(event) {
       if(event.type == google.maps.drawing.OverlayType.RECTANGLE) {
         var shape_added = event.overlay;
-        console.log(shape_added.getBounds().getNorthEast());
         shapes_added_so_far.push(shape_added);
         shape_added.setEditable(false);
         drawingManager.setDrawingMode(null);
