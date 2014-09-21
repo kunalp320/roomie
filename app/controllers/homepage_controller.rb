@@ -20,8 +20,17 @@ class HomepageController < ApplicationController
   end
 
   def get_results
-    puts "here"
-    render json: {suces: "success"}
+    lol = []
+    Location.find.each do |item|
+      lol << {
+        'n_lat'  => item.nw_lat, 
+        'n_long' => item.nw_long, 
+        's_lat'  => item.se_lat,
+        's_long' => item.se_long
+      }
+    end
+
+    render json: lol
   end
 
   def index

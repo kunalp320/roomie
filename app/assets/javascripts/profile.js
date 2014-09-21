@@ -10,11 +10,12 @@ $( document ).ready(function() {
     type: "GET",
     url: "/get_list",
     success: function(data) {
-      alert("gooch")
-          
+      console.log(data);
+      console.log('lol');
+      alert("success")
     },
     error: function(data) {
-      alert("fucl")
+      alert("error")
       
     }
   })
